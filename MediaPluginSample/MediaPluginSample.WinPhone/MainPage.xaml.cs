@@ -4,7 +4,7 @@ using Windows.Phone.UI.Input;
 using Windows.UI.Popups;
 using Windows.UI.Xaml;
 using Windows.UI.Xaml.Controls;
-using Windows.UI.Xaml.Navigation;
+using Windows.UI.Xaml.Media.Imaging;
 using Plugin.Media;
 using Plugin.Media.Abstractions;
 
@@ -47,7 +47,8 @@ namespace MediaPluginSample.WinPhone
                     return;
                 }
 
-                await ShowMessage($"File saved at : {file.Path}");
+                var img = new BitmapImage(new Uri(file.Path));
+                CaptureImage.Source = img;
             }
 
             catch (Exception ex)

@@ -10,5 +10,6 @@
 
     <StackPanel VerticalAlignment="Center" HorizontalAlignment="Center">
         <Button Content="Camera!" x:Name="Button" />
+        <Image Height="250" Width="250" x:Name="CaptureImage" />
     </StackPanel>
 </Page>
